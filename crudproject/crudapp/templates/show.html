@@ -87,8 +87,7 @@
             <div>
                 <!-- Button trigger modal -->
                 <div align="right">
-                    <button type="button" onclick="$('#addHeaderTask').show();
-                    $('#editHeaderTask').hide();$('#addTaskBtn').show();$('#editTaskBtn').hide();" class="btn btn-success inputFieldSize"  data-bs-toggle="modal" data-bs-target="#taskModal"><img src="{{baseUrl}}static/images/AddVM.png" class="img3icon">
+                    <button type="button" onclick= "handleValidation()"  class="btn btn-success inputFieldSize"  data-bs-toggle="modal" data-bs-target="#taskModal"><img src="{{baseUrl}}static/images/AddVM.png" class="img3icon">
                         Add Task
                     </button>
                 </div>
@@ -210,6 +209,22 @@
 </script>
 
 
+
+<script>
+    function handleValidation(){
+        $('#addHeaderTask').show();
+        $('#editHeaderTask').hide();
+        $('#addTaskBtn').show();
+        $('#editTaskBtn').hide();
+
+        // To set the field blank
+        $('#titleName').val('');
+        $('#description').val('');
+        $('#status').val('');
+
+
+    }
+</script>
 
 <script>
     function showModalDetails(id){
